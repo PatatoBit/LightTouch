@@ -1,0 +1,5 @@
+{
+  "typescript.preferences.quoteStyle": "single",
+  "editor.formatOnSave": true,
+  "files.eol": "\n"
+}
