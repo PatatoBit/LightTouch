@@ -19,9 +19,9 @@ function RoomForm() {
 				<input type="number" className="input" placeholder="Room Code" pattern="\d*" maxLength={5} value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
 				
 				{inputValue ? 
-					<Link href={`/${inputValue}`}><a className="button ml-2">Join</a></Link> 
+					<Link href={`/${inputValue}`}><button className="button ml-2">Join</button></Link> 
 					: 
-					<button className="button">Join</button>
+					<button className="button ml-2">Join</button>
 				}
 			</div>
 			<Link href={`/${keycode}`}><a className="button" onClick={createRoom}>Create Room</a></Link>
