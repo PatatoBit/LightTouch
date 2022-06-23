@@ -8,13 +8,23 @@ export default function socketMiddleware(
 	res: Response,
 	next: NextHandler
 ) {
-	if (res.socket.server.io) {
-		console.info("socket server is already running !");
-	} else {
-		console.info("socket server is initializing");
+	if (!res.socket.server.io) {
 		const io = new Server(res.socket.server);
+
+		io.on("connection", (socket) => {
+			console.log(`${socket.id} connected.`);
+
+			socket.onAny((ev, ...args) => {
+				socket.broadcast.emit(ev, args);
+			});
+
+			socket.on("disconnect", () => {
+				console.log(`${socket.id} disconnected.`);
+			});
+		});
 
 		res.socket.server.io = io;
 	}
+
 	return next();
 }
