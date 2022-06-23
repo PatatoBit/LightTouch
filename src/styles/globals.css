@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.button {
+		@apply text-3xl text-yellow-300 font-bold border-4 border-yellow-300 rounded-lg p-2
+		hover:bg-yellow-300 hover:text-white transition-all;
+	}
+}
