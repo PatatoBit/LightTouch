@@ -9,4 +9,8 @@
 		@apply text-3xl text-yellow-300 font-bold border-4 border-yellow-300 rounded-lg p-2
 		hover:bg-yellow-300 hover:text-white transition-all;
 	}
+
+	.input {
+		@apply text-3xl text-white w-56 h-20 bg-slate-700 rounded-lg p-2 text-center;
+	}
 }
