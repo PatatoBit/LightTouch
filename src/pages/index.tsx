@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <Ring />
 
         <h1 className="text-3xl text-yellow-300">Room Code</h1>
-        <h1 className="text-4xl text-yellow-300">1234</h1>
+        <h1 className="text-4xl text-yellow-300 font-bold">1234</h1>
 
       </div>
     </>
