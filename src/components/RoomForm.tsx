@@ -9,7 +9,7 @@ function createRoom(){
 }
 
 
-function Room() {
+function RoomForm() {
 
   return (
     <>
@@ -22,4 +22,4 @@ function Room() {
   )
 }
 
-export default Room
+export default RoomForm
