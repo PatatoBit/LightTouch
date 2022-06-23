@@ -16,7 +16,7 @@ function RoomForm() {
   return (
     <>
 			<div className="my-2 flex flex-row">
-				<input type="number" className="text-3xl text-white w-56 h-20 bg-slate-700 rounded-lg p-2 text-center" placeholder="Room Code" pattern="\d*" maxLength={5} value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+				<input type="number" className="input" placeholder="Room Code" pattern="\d*" maxLength={5} value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
 				
 				{inputValue ? 
 					<Link href={`/${inputValue}`}><a className="button ml-2">Join</a></Link> 
