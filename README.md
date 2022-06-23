@@ -6,4 +6,4 @@
 
 <br />
 
-> Created with SvelteKit and TailwindCSS
+> Created with SvelteKit and TailwindCSS - WIP
