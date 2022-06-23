@@ -8,4 +8,4 @@
 
 <br />
 
-> Created with SvelteKit and TailwindCSS - WIP
+> Created with NextJS,TailwindCSS, and Socket.IO - WIP
