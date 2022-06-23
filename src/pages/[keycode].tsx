@@ -13,7 +13,7 @@ function Lobby() {
 		<>
 			<div className="flex flex-col w-full h-screen items-center justify-center bg-slate-800">
 				<h1 className="text-5xl text-yellow-300">Light Touch</h1>
-				<div className="text-2xl text-yellow-300">{ keycode }</div>
+				<div className="text-2xl mt-2 text-yellow-300">Room ID: { keycode }</div>
 
 				<Ring />
 				<Link href="/"><a className="button">Leave</a></Link>
