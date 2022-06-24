@@ -8,7 +8,6 @@ import Head from 'next/head';
 
 import middleware from "../middlewares/middleware";
 
-import Footer from '../components/Footer';
 import Ring from "../components/Ring";
 
 import { io, Socket } from "socket.io-client";
@@ -64,7 +63,6 @@ export default function Lobby() {
 					<a className="button">Leave</a>
 				</Link>
 			</div>
-			<Footer />
 		</>
 	);
 }

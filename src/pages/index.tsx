@@ -4,9 +4,9 @@ import Head from 'next/head'
 
 import middleware from "../middlewares/middleware";
 
-import Footer from '../components/Footer';
 import Ring from "../components/Ring";
 import RoomForm from "../components/RoomForm";
+import Layout from '../components/Layout';
 
 import { io, Socket } from "socket.io-client";
 
@@ -40,7 +40,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<>
+		<Layout>
 			<Head>
 				<title>Light Touch</title>
 				<link rel="icon" href="/assets/PixelLight.png" />
@@ -54,9 +54,8 @@ export default function Home() {
 					onMouseLeave={mouseLeave}
 				/>
 				<RoomForm />
-				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 }
 
