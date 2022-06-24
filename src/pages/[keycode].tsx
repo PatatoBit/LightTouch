@@ -1,10 +1,14 @@
 import type { GetServerSideProps } from "next";
 import { useState, useEffect } from "react";
 import { useRouter, NextRouter } from "next/router";
+
 import Link from "next/link";
+import Head from 'next/head';
+
 
 import middleware from "../middlewares/middleware";
 
+import Footer from '../components/Footer';
 import Ring from "../components/Ring";
 
 import { io, Socket } from "socket.io-client";
@@ -42,6 +46,11 @@ export default function Lobby() {
 
 	return (
 		<>
+			<Head>
+				<title>Room: {keycode}</title>
+				<link rel="icon" href="/assets/PixelLight.png" />
+			</Head>
+
 			<div className="flex flex-col w-full h-screen items-center justify-center bg-slate-800">
 				<h1 className="text-5xl text-yellow-300">Light Touch</h1>
 				<div className="text-2xl mt-2 text-yellow-300">Room ID: {keycode}</div>
@@ -55,6 +64,7 @@ export default function Lobby() {
 					<a className="button">Leave</a>
 				</Link>
 			</div>
+			<Footer />
 		</>
 	);
 }
