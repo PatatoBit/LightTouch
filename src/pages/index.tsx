@@ -1,5 +1,6 @@
 import { GetServerSideProps } from "next";
 import { useState, useEffect } from "react";
+import Head from 'next/head'
 
 import middleware from "../middlewares/middleware";
 
@@ -38,15 +39,22 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div className="flex flex-col w-full h-screen items-center justify-center bg-slate-800">
-			<h1 className="text-5xl text-yellow-300">Light Touch</h1>
-			<Ring
-				isHovering={light}
-				onMouseEnter={mouseEnter}
-				onMouseLeave={mouseLeave}
-			/>
-			<RoomForm />
-		</div>
+		<>
+			<Head>
+				<title>Light Touch</title>
+				<link rel="icon" href="/assets/PixelLight.png" />
+			</Head>
+			<div className="flex flex-col w-full h-screen items-center justify-center bg-slate-800">
+				<h1 className="text-5xl text-yellow-300">Light Touch</h1>
+				<p className="text-xl text-yellow-300 my-2">Connects long-distance relationships with a lamp?</p>
+				<Ring
+					isHovering={light}
+					onMouseEnter={mouseEnter}
+					onMouseLeave={mouseLeave}
+				/>
+				<RoomForm />
+			</div>
+		</>
 	);
 }
 
